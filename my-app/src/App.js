@@ -3,6 +3,7 @@ import Header from './components/Header'
 import {useState} from 'react'
 import Counter from './components/Counter';
 import Employee from './components/Employee';
+import Counter2 from './components/Counter2';
 
 function App() {
   const [count,setCount]=useState(0);
@@ -22,7 +23,10 @@ function App() {
   //<Employee key={index} name={obj.name} age={obj.age}/>  
   //other way use with spread operator
   //we can avoid return in map and also use () for mult exp
+  //useEffect
 
+  const [state,setState]=useState(false);
+  //Mount unmount state and update state is in Counter2 
   return (
     <div>
       <Header data={data}/>
@@ -36,6 +40,9 @@ function App() {
       
       )
     }
+    <h2 onClick={()=>setState(!state)}>SHOW / HIDE</h2>
+   {state && <Counter2/> } 
+
     </div>
   );
 }
