@@ -7,7 +7,6 @@ import Arrow from '../../assets/Arrow';
 import SellButton from '../../assets/SellButton';
 import SellButtonPlus from '../../assets/SellButtonPlus';
 import {AuthContext, FirebaseContext} from '../../store/FirebaseContex';
-
 function Header() {
     const {user} = useContext(AuthContext)
     const {firebase} = useContext(FirebaseContext);
